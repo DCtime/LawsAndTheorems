@@ -1,6 +1,8 @@
 package net.dctime.lawsandtheorems;
 
 import com.mojang.logging.LogUtils;
+import net.dctime.lawsandtheorems.register.ModItems;
+import net.dctime.lawsandtheorems.register.ModParticleTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -39,9 +41,14 @@ public class LawsAndTheorems
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
+    // This Constructor will be called when forge finds it when minecraft is loading
     public LawsAndTheorems()
     {
+        // there are two event buses: ModEventBus(init) and MinecraftForge.EVENT_BUS(idk)
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModItems.register(modEventBus);
+        ModParticleTypes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

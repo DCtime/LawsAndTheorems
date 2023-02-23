@@ -1,27 +1,18 @@
 package net.dctime.lawsandtheorems.eulers_number.client;
 
-import com.electronwill.nightconfig.core.conversion.InvalidValueException;
-import com.mojang.logging.LogUtils;
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.particle.SpriteSet;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.slf4j.Logger;
 
 @Mod.EventBusSubscriber(modid = LawsAndTheorems.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EulerFlameForgeEvents
 {
-    private static final Logger LOGGER = LogUtils.getLogger();
+    // private static final Logger LOGGER = LogUtils.getLogger();
 
     @SubscribeEvent
     public static void EulersNumberItemOnGround(EntityEvent event)

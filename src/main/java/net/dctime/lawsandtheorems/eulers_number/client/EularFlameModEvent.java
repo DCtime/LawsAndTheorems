@@ -1,7 +1,6 @@
 package net.dctime.lawsandtheorems.eulers_number.client;
 
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -1,6 +1,5 @@
 package net.dctime.lawsandtheorems.register;
 
-import com.mojang.serialization.Decoder;
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;

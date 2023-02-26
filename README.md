@@ -21,7 +21,16 @@ https://www.youtube.com/playlist?list=PLQQve3PraKTSDHccOfpn0z4qkS7OTcVzO
 Sure :), first fork this project to your own github. Second, clone it to your local computer. Lastly, open with VScode (IDK will IntellijIDEA and Eclipse work because I have run genVSCodeRun gradle task), and you're off to go. After you have finished, make a pull request and i'll choose to deny it or not :D.
 
 Oh remember to download jdk 17, not 8. Minecraft runs in java 17.
-If the IDE starts yelling random error messages, cancel what it is doing and type "./gradlew genVSCodeRun" (Linux) or "gradlew genVSCodeRun" (Windows) in your command prompt.
+If the IDE starts yelling random error messages, cancel what it is doing and type 
+```
+./gradlew genVSCodeRun
+```
+if you are using Mac/Linux
+or 
+```
+"gradlew genVSCodeRun" 
+```
+if you are using Windows in your command prompt.
 
 ## AHH There is bugs inside!
 

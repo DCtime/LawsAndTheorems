@@ -1,5 +1,9 @@
 package net.dctime.lawsandtheorems.eulers_number.client;
 
+import org.slf4j.Logger;
+
+import com.mojang.logging.LogUtils;
+
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
@@ -9,32 +13,19 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = LawsAndTheorems.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = LawsAndTheorems.MODID,value=Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EulerFlameForgeEvents
 {
-    // private static final Logger LOGGER = LogUtils.getLogger();
 
     @SubscribeEvent
-    public static void EulersNumberItemOnGround(EntityEvent event)
+    public static void EulersNumberItemThrown(EntityEvent event)
     {
-        if (event.getEntity() instanceof ItemEntity)
+        if (event.getEntity() instanceof ItemEntity && event.getEntity().level.isClientSide())
         {
-
             ItemEntity itemEntity = (ItemEntity) event.getEntity();
 
             if ((((ItemEntity) event.getEntity()).getItem().is(ModItems.THE_NUMBER_E.get())))
             {
-                /*
-                event.getEntity().level.addAlwaysVisibleParticle(
-                        ModParticleTypes.EULARS_FLAME_SIMPLE_PARTICLE_TYPE,
-                        itemEntity.getX()+Math.sin(itemEntity.getAge() * (2 * Math.PI / 360) * 10),
-                        itemEntity.getY()+0.5,
-                        itemEntity.getZ()+Math.cos(itemEntity.getAge() * (2 * Math.PI / 360) * 10),
-                        0,
-                        0,
-                        0
-                );
-                 */
                 if (itemEntity.getAge() > 50)
                 {
                     // velocity
@@ -59,9 +50,6 @@ public class EulerFlameForgeEvents
                             0*Math.cos(itemEntity.getAge() * (2 * Math.PI / 360) * 10)
                     );
                 }
-
-
-
             }
         }
     }

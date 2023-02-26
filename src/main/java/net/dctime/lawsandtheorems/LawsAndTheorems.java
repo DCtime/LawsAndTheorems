@@ -1,13 +1,15 @@
 package net.dctime.lawsandtheorems;
 
 import com.mojang.logging.LogUtils;
+
+import net.dctime.lawsandtheorems.networking.ModNetworkHandler;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
+import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.MinecraftForge;
@@ -49,7 +51,7 @@ public class LawsAndTheorems
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(modEventBus);
         ModParticleTypes.register(modEventBus);
-
+        ModSoundEvents.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -62,11 +64,11 @@ public class LawsAndTheorems
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    // commonSetup : For actions that are common to both physical client and server
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        ModNetworkHandler.init();
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

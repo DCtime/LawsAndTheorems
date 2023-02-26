@@ -7,7 +7,7 @@ This project is made when I'm freshman in college. Most of the time we are learn
 * Create a Minecraft mod which needs Forge Mod Loader to run it.
 * Dump every STEM concepts into the mod because I'm bored.
 * Doesn't care how fun it is.
-* Performance Optimize? If there is major performance issue, send an issue for me or make a pull request, or I'll just focus on readabiity.
+* Performance Optimize? If there is major performance issue, send an issue to me or make a pull request, or I'll just focus on readabiity.
 
 ## How do I add it to minecraft?
 

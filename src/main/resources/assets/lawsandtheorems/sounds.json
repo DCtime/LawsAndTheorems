@@ -6,27 +6,27 @@
         [
             {
                 "weight":1000,
-                "name":"lawsandtheorems:eulars_number_burning_1"
+                "name":"lawsandtheorems:eulers_number_burning/eulars_number_burning_1"
             },
             {
                 "weight":1000,
-                "name":"lawsandtheorems:eulars_number_burning_2"
+                "name":"lawsandtheorems:eulers_number_burning/eulars_number_burning_2"
             },
             {
                 "weight":1000,
-                "name":"lawsandtheorems:eulars_number_burning_3"
+                "name":"lawsandtheorems:eulers_number_burning/eulars_number_burning_3"
             },
             {
                 "weight":1000,
-                "name":"lawsandtheorems:eulars_number_burning_4"
+                "name":"lawsandtheorems:eulers_number_burning/eulars_number_burning_4"
             },
             {
                 "weight":1000,
-                "name":"lawsandtheorems:eulars_number_burning_5"
+                "name":"lawsandtheorems:eulers_number_burning/eulars_number_burning_5"
             },
             {
                 "weight":1,
-                "name":"lawsandtheorems:eulars_number_burning_yee"
+                "name":"lawsandtheorems:eulers_number_burning/eulars_number_burning_yee"
             }
 
         ]

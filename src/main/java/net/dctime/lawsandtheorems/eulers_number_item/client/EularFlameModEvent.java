@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.eulers_number.client;
+package net.dctime.lawsandtheorems.eulers_number_item.client;
 
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
 import net.minecraftforge.api.distmarker.Dist;

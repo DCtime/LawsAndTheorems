@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.eulers_number.client;
+package net.dctime.lawsandtheorems.eulers_number_item.client;
 
 import org.slf4j.Logger;
 
@@ -14,7 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = LawsAndTheorems.MODID,value=Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class EulerFlameForgeEvents
+public class EulerFlameForgeClientEvents
 {
 
     @SubscribeEvent

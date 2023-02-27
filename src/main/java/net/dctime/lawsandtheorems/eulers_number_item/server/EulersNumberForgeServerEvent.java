@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.eulers_number.server;
+package net.dctime.lawsandtheorems.eulers_number_item.server;
 
 
 import org.slf4j.Logger;

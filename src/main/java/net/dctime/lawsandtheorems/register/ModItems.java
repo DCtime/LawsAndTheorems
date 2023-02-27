@@ -14,8 +14,11 @@ public class ModItems
             DeferredRegister.create(ForgeRegistries.ITEMS, LawsAndTheorems.MODID);
 
     public static final RegistryObject<Item> THE_NUMBER_E =
-            ITEM_DEFERRED_REGISTER.register("the_number_e", () -> new Item(
-                    new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.UNCOMMON)));
+        ITEM_DEFERRED_REGISTER.register("the_number_e", () -> new Item(
+            new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> NATURE_LOG = 
+        ITEM_DEFERRED_REGISTER.register("nature_log", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON)));
 
     public static void register(IEventBus eventBus)
     {

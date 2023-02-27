@@ -30,5 +30,27 @@
             }
 
         ]
+    },
+    "nature_log_splashing":
+    {
+        "subtitle": "Nature Log Splashing",
+        "sounds":
+        [
+            {
+                "name":"lawsandtheorems:nature_log_splashing/nature_log_splashing_1"
+            },
+            {
+                "name":"lawsandtheorems:nature_log_splashing/nature_log_splashing_2"
+            },
+            {
+                "name":"lawsandtheorems:nature_log_splashing/nature_log_splashing_3"
+            },
+            {
+                "name":"lawsandtheorems:nature_log_splashing/nature_log_splashing_4"
+            },
+            {
+                "name":"lawsandtheorems:nature_log_splashing/nature_log_splashing_5"
+            }
+        ]
     }
 }

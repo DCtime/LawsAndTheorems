@@ -9,7 +9,6 @@ import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraftforge.event.TickEvent.ServerTickEvent;
@@ -24,13 +23,16 @@ public class EulersNumberForgeServerEvent
     {
         for (ServerLevel level : event.getServer().getAllLevels())
         {
-            for (Entity entity : level.getAllEntities())
+            if (!level.isClientSide())
             {
-                if (entity instanceof ItemEntity && ((ItemEntity) entity).getItem().is(ModItems.THE_NUMBER_E.get()))
+                for (Entity entity : level.getAllEntities())
                 {
-                    if ((int)(Math.random()*1000) == 0)
+                    if (entity instanceof ItemEntity && ((ItemEntity) entity).getItem().is(ModItems.THE_NUMBER_E.get()))
                     {
-                        entity.playSound(ModSoundEvents.EULARS_NUMBER_BURNING.get());
+                        if ((int)(Math.random()*1000) == 0)
+                        {
+                            entity.playSound(ModSoundEvents.EULARS_NUMBER_BURNING.get());
+                        }
                     }
                 }
             }

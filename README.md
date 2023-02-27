@@ -11,7 +11,7 @@ This project is made when I'm freshman in college. Most of the time we are learn
 
 ## How do I add it to minecraft?
 
-bruh I'm not done yet. After several months(years or forever) of development, I'll post it on curseforge, and you can download the mod from there.
+Select a release at the right of the github repo. Download the jar file (ignore the source codes) and do the same thing as other mods do.
 
 ## Check the development videos I made.
 https://www.youtube.com/playlist?list=PLQQve3PraKTSDHccOfpn0z4qkS7OTcVzO

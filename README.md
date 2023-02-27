@@ -16,6 +16,9 @@ Select a release at the right of the github repo. Download the jar file (ignore 
 ## Check the development videos I made.
 https://www.youtube.com/playlist?list=PLQQve3PraKTSDHccOfpn0z4qkS7OTcVzO
 
+## Is there a wiki page for this
+YES! check it out at https://laws-and-theorems.fandom.com/wiki/Laws_and_Theorems_Wiki. We need someone to contribute to it.
+
 ## I'm interested in this project. I want to contribute (add randomness) to this project.
 
 Sure :), first fork this project to your own github. Second, clone it to your local computer. Lastly, open with VScode (IDK will IntellijIDEA and Eclipse work because I have run genVSCodeRun gradle task), and you're off to go. After you have finished, make a pull request and i'll choose to deny it or not :D.

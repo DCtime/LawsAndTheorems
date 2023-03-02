@@ -6,6 +6,7 @@ import net.dctime.lawsandtheorems.networking.ModNetworkHandler;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
+import net.dctime.lawsandtheorems.register.ModTriggers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -69,6 +70,9 @@ public class LawsAndTheorems
     {
         // Some common setup code
         ModNetworkHandler.init();
+        event.enqueueWork(() -> {
+            ModTriggers.init();
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

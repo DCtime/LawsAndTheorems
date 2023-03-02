@@ -1,7 +1,6 @@
 package net.dctime.lawsandtheorems.register;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.eventbus.api.IEventBus;

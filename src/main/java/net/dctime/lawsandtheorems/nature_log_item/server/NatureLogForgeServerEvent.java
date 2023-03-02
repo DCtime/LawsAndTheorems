@@ -3,16 +3,13 @@ package net.dctime.lawsandtheorems.nature_log_item.server;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
+import net.dctime.lawsandtheorems.register.ModTriggers;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
@@ -50,6 +47,7 @@ public class NatureLogForgeServerEvent
                         {
                             if (nearbyEntities.get(index) instanceof ItemEntity && ((ItemEntity)nearbyEntities.get(index)).getItem().is(ModItems.THE_NUMBER_E.get()))
                             {
+                                // TODO: Make a packets that was sent to the client to display particles
                                 ItemEntity eulers_number_in_reaction = ((ItemEntity) nearbyEntities.get(index));
                                 ItemStack eulers_number_after_reaction = eulers_number_in_reaction.copy().getItem();
                                 eulers_number_after_reaction.shrink(1);
@@ -59,7 +57,13 @@ public class NatureLogForgeServerEvent
                                 ItemStack natural_log_after_reaction = natural_log_in_reaction.copy().getItem();
                                 natural_log_after_reaction.shrink(1);
                                 natural_log_in_reaction.setItem(natural_log_after_reaction);
-                                
+
+                                if (((ItemEntity) entity).getThrowingEntity() instanceof ServerPlayer)
+                                {
+                                    ServerPlayer player;
+                                    player = ((ServerPlayer)((ItemEntity) entity).getThrowingEntity());
+                                    ModTriggers.EULERS_NUMBER_MEET_NATURE_LOG.trigger(player);
+                                }
                             }
                         }
                         

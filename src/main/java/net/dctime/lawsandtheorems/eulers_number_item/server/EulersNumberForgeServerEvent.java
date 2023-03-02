@@ -1,10 +1,5 @@
 package net.dctime.lawsandtheorems.eulers_number_item.server;
 
-
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;

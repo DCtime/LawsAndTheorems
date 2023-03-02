@@ -4,6 +4,8 @@ package net.dctime.lawsandtheorems.nature_log_item.server;
 import java.util.List;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
+import net.dctime.lawsandtheorems.networking.ModNetworkHandler;
+import net.dctime.lawsandtheorems.networking.packets.EulersFlameMeetsNatureLogParticlePacket;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.dctime.lawsandtheorems.register.ModTriggers;
@@ -16,6 +18,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.TickEvent.ServerTickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.network.PacketDistributor;
+import net.minecraftforge.network.simple.SimpleChannel;
 
 @Mod.EventBusSubscriber(modid = LawsAndTheorems.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class NatureLogForgeServerEvent
@@ -47,7 +51,11 @@ public class NatureLogForgeServerEvent
                         {
                             if (nearbyEntities.get(index) instanceof ItemEntity && ((ItemEntity)nearbyEntities.get(index)).getItem().is(ModItems.THE_NUMBER_E.get()))
                             {
+                                Entity targetEntity = nearbyEntities.get(index);
                                 // TODO: Make a packets that was sent to the client to display particles
+                                ModNetworkHandler.CHANNEL_INSTANCE.send(PacketDistributor.ALL.noArg(),
+                                    new EulersFlameMeetsNatureLogParticlePacket(targetEntity.getX(), targetEntity.getY(), targetEntity.getZ()));
+
                                 ItemEntity eulers_number_in_reaction = ((ItemEntity) nearbyEntities.get(index));
                                 ItemStack eulers_number_after_reaction = eulers_number_in_reaction.copy().getItem();
                                 eulers_number_after_reaction.shrink(1);

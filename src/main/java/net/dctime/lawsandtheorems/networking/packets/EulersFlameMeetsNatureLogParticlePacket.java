@@ -1,18 +1,12 @@
 package net.dctime.lawsandtheorems.networking.packets;
 
 
-import java.io.IOException;
 import java.util.Optional;
 import java.util.function.Supplier;
-
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
 
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundSource;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,7 +15,6 @@ import net.minecraftforge.network.NetworkEvent;
 
 public class EulersFlameMeetsNatureLogParticlePacket
 {
-    private static final Logger logger = LogUtils.getLogger();
     private double x;
     private double y;
     private double z;

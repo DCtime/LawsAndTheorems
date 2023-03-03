@@ -10,20 +10,16 @@ import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.dctime.lawsandtheorems.register.ModTriggers;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.data.worldgen.DimensionTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.TickEvent.ServerTickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.PacketDistributor;
-import net.minecraftforge.network.simple.SimpleChannel;
 
 @Mod.EventBusSubscriber(modid = LawsAndTheorems.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class NatureLogForgeServerEvent

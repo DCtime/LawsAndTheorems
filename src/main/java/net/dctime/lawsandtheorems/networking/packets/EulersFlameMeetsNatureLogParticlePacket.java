@@ -1,16 +1,27 @@
 package net.dctime.lawsandtheorems.networking.packets;
 
 
+import java.io.IOException;
+import java.util.Optional;
 import java.util.function.Supplier;
 
+import org.slf4j.Logger;
+
+import com.mojang.logging.LogUtils;
+
+import net.dctime.lawsandtheorems.register.ModSoundEvents;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.sounds.SoundSource;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.NetworkEvent;
 
 public class EulersFlameMeetsNatureLogParticlePacket
 {
+    private static final Logger logger = LogUtils.getLogger();
     private double x;
     private double y;
     private double z;
@@ -40,22 +51,16 @@ public class EulersFlameMeetsNatureLogParticlePacket
     {
         context.get().enqueueWork(() -> 
         {
-            // TODO: This works but unsafeRunWhenOn is dead, test where is runs
-            System.out.println("AH");
             // Make sure its on the PHYSICAL client
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> EulersFlameMeetsNatureLogParticlePacket.ClientPacket.handlePacket(context, x, y, z));
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
+                Minecraft minecraft = Minecraft.getInstance();
+                // level might be null
+                // if null it will yell loudly
+                Optional<ClientLevel> serverLevel = Optional.of(minecraft.level);
+                serverLevel.get().playLocalSound(x, y, z, ModSoundEvents.MIND_BLOWING.get(), SoundSource.PLAYERS, 1, 1, false);
+            });
         });
 
         context.get().setPacketHandled(true);
-    }
-
-    protected class ClientPacket
-    {
-        public static void handlePacket(Supplier<NetworkEvent.Context> context, double x, double y, double z)
-        {
-            // Client Side
-            context.get().getSender().level.addAlwaysVisibleParticle(ParticleTypes.SMOKE, false, x, y, z, 0, 0, 0);
-            
-        }
     }
 }

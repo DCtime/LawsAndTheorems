@@ -21,6 +21,10 @@ public class ModSoundEvents
         SOUND_EVENTS.register("nature_log_splashing",
         () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(LawsAndTheorems.MODID, "nature_log_splashing")));
 
+    public static final RegistryObject<SoundEvent> MIND_BLOWING = 
+        SOUND_EVENTS.register("mind_blowing", 
+        () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(LawsAndTheorems.MODID, "mind_blowing")));
+
     public static void register(IEventBus eventBus)
     {
         SOUND_EVENTS.register(eventBus);

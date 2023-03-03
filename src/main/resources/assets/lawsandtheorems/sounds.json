@@ -52,5 +52,15 @@
                 "name":"lawsandtheorems:nature_log_splashing/nature_log_splashing_5"
             }
         ]
+    },
+    "mind_blowing":
+    {
+        "subtitle": "Mind Blowing",
+        "sounds":
+        [
+            {
+               "name":"lawsandtheorems:mind_blowing/mind_blowing_1"
+            }
+        ]
     }
 }

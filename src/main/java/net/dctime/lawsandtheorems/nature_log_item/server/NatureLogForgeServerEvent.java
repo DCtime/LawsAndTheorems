@@ -9,11 +9,15 @@ import net.dctime.lawsandtheorems.networking.packets.EulersFlameMeetsNatureLogPa
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.dctime.lawsandtheorems.register.ModTriggers;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.data.worldgen.DimensionTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.TickEvent.ServerTickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -52,9 +56,18 @@ public class NatureLogForgeServerEvent
                             if (nearbyEntities.get(index) instanceof ItemEntity && ((ItemEntity)nearbyEntities.get(index)).getItem().is(ModItems.THE_NUMBER_E.get()))
                             {
                                 Entity targetEntity = nearbyEntities.get(index);
-                                // TODO: Make a packets that was sent to the client to display particles
-                                ModNetworkHandler.CHANNEL_INSTANCE.send(PacketDistributor.ALL.noArg(),
-                                    new EulersFlameMeetsNatureLogParticlePacket(targetEntity.getX(), targetEntity.getY(), targetEntity.getZ()));
+                                if (targetEntity.getLevel() instanceof ServerLevel)
+                                {
+                                    ServerLevel serverLevel = (ServerLevel) targetEntity.getLevel();
+                                    serverLevel.sendParticles(ParticleTypes.SONIC_BOOM, entity.getX(), entity.getY()+1, entity.getZ(), 1, 0, 0, 0, 0);
+                                    serverLevel.sendParticles(ParticleTypes.FLASH, entity.getX(), entity.getY()+1, entity.getZ(), 1, 0, 0, 0, 0);
+                                    for (int counter = 0; counter < 100; counter++)
+                                    {
+                                        serverLevel.sendParticles(ParticleTypes.DRAGON_BREATH, entity.getX()-1.5+Math.random()*3, entity.getY()+1+Math.random()*3, entity.getZ()-1.5+Math.random()*3, 1, 
+                                            Math.random(), Math.random(), Math.random(), Math.random());
+                                    }
+                                    
+                                }
 
                                 ItemEntity eulers_number_in_reaction = ((ItemEntity) nearbyEntities.get(index));
                                 ItemStack eulers_number_after_reaction = eulers_number_in_reaction.copy().getItem();
@@ -70,6 +83,9 @@ public class NatureLogForgeServerEvent
                                 {
                                     ServerPlayer player;
                                     player = ((ServerPlayer)((ItemEntity) entity).getThrowingEntity());
+                                    ModNetworkHandler.CHANNEL_INSTANCE.send(PacketDistributor.PLAYER.with(() -> player),
+                                        new EulersFlameMeetsNatureLogParticlePacket(player.getX(), player.getY(), player.getZ()));
+
                                     ModTriggers.EULERS_NUMBER_MEET_NATURE_LOG.trigger(player);
                                 }
                             }

@@ -9,7 +9,7 @@ modLoader="javafml" #mandatory
 loaderVersion="[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="All rights reserved"
+license="MIT"
 # A URL to refer people to when problems occur with this mod
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
@@ -29,7 +29,7 @@ displayName="Laws And Theorems" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="lawsandtheorems.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for this example mod goes to Java" #optional
+credits="Check the CREDITS.md for more information" #optional
 # A text field displayed in the mod UI
 authors="DCtime" #optional
 # Display Test controls the display for your mod in the server connection screen
@@ -42,7 +42,7 @@ authors="DCtime" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-bruh Im bored
+This mod is built by DCtime because he is bored in college freshman. It offers bunch of STEM concepts to make this mod looks perfect.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.lawsandtheorems]] #optional

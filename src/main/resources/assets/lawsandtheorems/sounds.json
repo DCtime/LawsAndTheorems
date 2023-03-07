@@ -59,7 +59,19 @@
         "sounds":
         [
             {
-               "name":"lawsandtheorems:mind_blowing/mind_blowing_1"
+                "name":"lawsandtheorems:mind_blowing/mind_blowing_1"
+            },
+            {
+                "name":"lawsandtheorems:mind_blowing/mind_blowing_2"
+            },
+            {
+                "name":"lawsandtheorems:mind_blowing/mind_blowing_3"
+            },
+            {
+                "name":"lawsandtheorems:mind_blowing/mind_blowing_4"
+            },
+            {
+                "name":"lawsandtheorems:mind_blowing/mind_blowing_5"
             }
         ]
     }

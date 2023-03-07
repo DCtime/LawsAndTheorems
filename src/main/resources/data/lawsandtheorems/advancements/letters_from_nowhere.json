@@ -1,0 +1,25 @@
+{
+    "display": {
+      "icon": {
+        "item": "lawsandtheorems:the_number_e"
+      },
+      "title": "Letters From Nowhere",
+      "description": "Solve a problem by getting rid of e and ln with ln and e. (e^lnx = x)",
+      "frame": "challenge",
+      "background": "minecraft:textures/block/quartz_block_side.png",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "meets": {
+        "trigger": "lawsandtheorems:eulers_number_meet_nature_log"
+      }
+    },
+    "requirements": [
+      [
+        "meets"
+      ]
+    ]
+  }
+  

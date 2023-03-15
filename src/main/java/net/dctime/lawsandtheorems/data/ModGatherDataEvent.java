@@ -22,6 +22,7 @@ public class ModGatherDataEvent
         PackOutput output = dataProvider.getPackOutput();
 
         dataProvider.addProvider(event.includeClient(), new ModItemModelProvider(output, LawsAndTheorems.MODID, efh));
+        dataProvider.addProvider(event.includeClient(), new ModEnUsLanguageProvider(output, LawsAndTheorems.MODID, "en_us"));
     }
     
 }

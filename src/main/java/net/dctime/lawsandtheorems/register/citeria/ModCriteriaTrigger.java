@@ -11,7 +11,7 @@ import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 
-public class ModCriteriaTrigger extends SimpleCriterionTrigger<ModCriteriaTrigger.ModCriteriaTriggerInstance>{
+public class ModCriteriaTrigger extends SimpleCriterionTrigger<ModCriteriaTrigger.ModCriteriaTriggerInstance> {
 
     private ResourceLocation ID;
 

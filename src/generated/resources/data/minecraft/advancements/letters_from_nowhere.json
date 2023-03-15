@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "meets": {
+      "conditions": {},
+      "trigger": "lawsandtheorems:eulers_number_meet_nature_log"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/quartz_block_side.png",
+    "description": {
+      "translate": "advancement.lawsandtheorems.letter_from_nowhere.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "lawsandtheorems:the_number_e"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.lawsandtheorems.letter_from_nowhere.title"
+    }
+  },
+  "requirements": [
+    [
+      "meets"
+    ]
+  ]
+}

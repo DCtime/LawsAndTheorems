@@ -1,13 +1,18 @@
 package net.dctime.lawsandtheorems.data;
 
 
+import java.util.List;
+
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.data.providers.ModEnUsLanguageProvider;
 import net.dctime.lawsandtheorems.data.providers.ModItemModelProvider;
 import net.dctime.lawsandtheorems.data.providers.ModSoundDefinitionProvider;
+import net.dctime.lawsandtheorems.data.providers.server.ModAdvancementProvider;
+import net.minecraft.advancements.AdvancementList;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +32,7 @@ public class ModGatherDataEvent
         dataProvider.addProvider(event.includeClient(), new ModItemModelProvider(output, LawsAndTheorems.MODID, efh));
         dataProvider.addProvider(event.includeClient(), new ModEnUsLanguageProvider(output, LawsAndTheorems.MODID, "en_us"));
         dataProvider.addProvider(event.includeClient(), new ModSoundDefinitionProvider(output, LawsAndTheorems.MODID, efh));
+        dataProvider.addProvider(event.includeServer(), new ModAdvancementProvider(output, event.getLookupProvider(), efh, List.of(new ModAdvancementProvider.ModAdvancementGenerator())));
     }
     
 }

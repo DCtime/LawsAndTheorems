@@ -1,6 +1,7 @@
-package net.dctime.lawsandtheorems.eulers_number_item.client;
+package net.dctime.lawsandtheorems.event.eulers_number_item.client;
 
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
+import net.dctime.lawsandtheorems.register.particle.EularFlameParticle;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

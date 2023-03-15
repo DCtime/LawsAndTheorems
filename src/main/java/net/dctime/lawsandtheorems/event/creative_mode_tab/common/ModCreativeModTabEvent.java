@@ -1,5 +1,6 @@
-package net.dctime.lawsandtheorems;
+package net.dctime.lawsandtheorems.event.creative_mode_tab.common;
 
+import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;

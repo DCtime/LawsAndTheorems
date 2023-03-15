@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.nature_log_item.server;
+package net.dctime.lawsandtheorems.event.nature_log_item.server;
 
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.eulers_number_item.client;
+package net.dctime.lawsandtheorems.register.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;

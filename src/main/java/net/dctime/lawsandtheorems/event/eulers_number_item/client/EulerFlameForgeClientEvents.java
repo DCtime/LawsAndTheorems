@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.eulers_number_item.client;
+package net.dctime.lawsandtheorems.event.eulers_number_item.client;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;

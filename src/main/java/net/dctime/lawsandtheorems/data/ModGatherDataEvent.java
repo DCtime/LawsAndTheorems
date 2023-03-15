@@ -1,7 +1,7 @@
-package net.dctime.lawsandtheorems;
+package net.dctime.lawsandtheorems.data;
 
 
-import net.dctime.lawsandtheorems.eulers_number_item.client.EulersNumberItemModelProvider;
+import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -21,8 +21,7 @@ public class ModGatherDataEvent
         ExistingFileHelper efh = event.getExistingFileHelper();
         PackOutput output = dataProvider.getPackOutput();
 
-        dataProvider.addProvider(event.includeClient(), new EulersNumberItemModelProvider(output, LawsAndTheorems.MODID, efh));
-
+        dataProvider.addProvider(event.includeClient(), new ModItemModelProvider(output, LawsAndTheorems.MODID, efh));
     }
     
 }

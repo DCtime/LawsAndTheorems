@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.data;
+package net.dctime.lawsandtheorems.data.providers;
 
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.minecraft.data.PackOutput;

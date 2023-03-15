@@ -1,0 +1,48 @@
+{
+  "eulars_number_burning": {
+    "sounds": [
+      {
+        "name": "lawsandtheorems:eulers_number_burning/eulars_number_burning_1",
+        "weight": 1000
+      },
+      {
+        "name": "lawsandtheorems:eulers_number_burning/eulars_number_burning_2",
+        "weight": 1000
+      },
+      {
+        "name": "lawsandtheorems:eulers_number_burning/eulars_number_burning_3",
+        "weight": 1000
+      },
+      {
+        "name": "lawsandtheorems:eulers_number_burning/eulars_number_burning_4",
+        "weight": 1000
+      },
+      {
+        "name": "lawsandtheorems:eulers_number_burning/eulars_number_burning_5",
+        "weight": 1000
+      },
+      "lawsandtheorems:eulers_number_burning/eulars_number_burning_yee"
+    ],
+    "subtitle": "Euler's Number Burning"
+  },
+  "mind_blowing": {
+    "sounds": [
+      "lawsandtheorems:mind_blowing/mind_blowing_1",
+      "lawsandtheorems:mind_blowing/mind_blowing_2",
+      "lawsandtheorems:mind_blowing/mind_blowing_3",
+      "lawsandtheorems:mind_blowing/mind_blowing_4",
+      "lawsandtheorems:mind_blowing/mind_blowing_5"
+    ],
+    "subtitle": "Mind Blowing"
+  },
+  "nature_log_splashing": {
+    "sounds": [
+      "lawsandtheorems:nature_log_splashing/nature_log_splashing_1",
+      "lawsandtheorems:nature_log_splashing/nature_log_splashing_2",
+      "lawsandtheorems:nature_log_splashing/nature_log_splashing_3",
+      "lawsandtheorems:nature_log_splashing/nature_log_splashing_4",
+      "lawsandtheorems:nature_log_splashing/nature_log_splashing_5"
+    ],
+    "subtitle": "Nature Log Splashing"
+  }
+}

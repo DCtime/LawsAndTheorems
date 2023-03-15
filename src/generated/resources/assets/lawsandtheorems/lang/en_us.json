@@ -1,4 +1,6 @@
 {
+  "advancement.lawsandtheorems.letter_from_nowhere.description": "Solve a problem by using e^lnx = x",
+  "advancement.lawsandtheorems.letter_from_nowhere.title": "Letters From Nowhere",
   "item.lawsandtheorems.nature_log": "Nature Log",
   "item.lawsandtheorems.the_number_e": "Euler's Number",
   "item_group.lawsandtheorems.creativemodtab": "Laws and Theorems",

@@ -22,6 +22,8 @@ public class ModEnUsLanguageProvider extends LanguageProvider
         this.add("sounds.lawsandtheorems.nature_log_splashing.subtitle", "Nature Log Splashing");
         this.add("sounds.lawsandtheorems.mind_blowing.subtitle", "Mind Blowing");
         this.add("item_group.lawsandtheorems.creativemodtab", "Laws and Theorems");
+        this.add("advancement.lawsandtheorems.letter_from_nowhere.title", "Letters From Nowhere");
+        this.add("advancement.lawsandtheorems.letter_from_nowhere.description", "Solve a problem by using e^lnx = x");
     }
     
 }

@@ -6,14 +6,10 @@ import java.util.function.Consumer;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
 import net.dctime.lawsandtheorems.register.ModItems;
-import net.dctime.lawsandtheorems.register.ModTriggers;
 import net.dctime.lawsandtheorems.register.citeria.ModCriteriaTrigger;
-import net.dctime.lawsandtheorems.register.citeria.ModCriteriaTrigger.ModCriteriaTriggerInstance;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.FrameType;
-import net.minecraft.advancements.critereon.ImpossibleTrigger;
 import net.minecraft.advancements.critereon.EntityPredicate.Composite;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
@@ -38,7 +34,7 @@ public class ModAdvancementProvider extends ForgeAdvancementProvider
         @Override
         public void generate(Provider registries, Consumer<Advancement> saver, ExistingFileHelper existingFileHelper)
         {
-            Advancement a = Advancement.Builder.advancement().display(
+            Advancement.Builder.advancement().display(
                 new DisplayInfo(new ItemStack(ModItems.THE_NUMBER_E.get()),
                 Component.translatable("advancement.lawsandtheorems.letter_from_nowhere.title"),
                 Component.translatable("advancement.lawsandtheorems.letter_from_nowhere.description"),

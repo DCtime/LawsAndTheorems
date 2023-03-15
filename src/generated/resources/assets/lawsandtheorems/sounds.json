@@ -23,7 +23,7 @@
       },
       "lawsandtheorems:eulers_number_burning/eulars_number_burning_yee"
     ],
-    "subtitle": "Euler's Number Burning"
+    "subtitle": "sounds.lawsandtheorems.eulers_number_burning.subtitle"
   },
   "mind_blowing": {
     "sounds": [
@@ -33,7 +33,7 @@
       "lawsandtheorems:mind_blowing/mind_blowing_4",
       "lawsandtheorems:mind_blowing/mind_blowing_5"
     ],
-    "subtitle": "Mind Blowing"
+    "subtitle": "sounds.lawsandtheorems.mind_blowing.subtitle"
   },
   "nature_log_splashing": {
     "sounds": [
@@ -43,6 +43,6 @@
       "lawsandtheorems:nature_log_splashing/nature_log_splashing_4",
       "lawsandtheorems:nature_log_splashing/nature_log_splashing_5"
     ],
-    "subtitle": "Nature Log Splashing"
+    "subtitle": "sounds.lawsandtheorems.nature_log_splashing.subtitle"
   }
 }

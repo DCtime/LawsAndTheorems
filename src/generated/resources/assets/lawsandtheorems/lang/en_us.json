@@ -1,4 +1,8 @@
 {
   "item.lawsandtheorems.nature_log": "Nature Log",
-  "item.lawsandtheorems.the_number_e": "Euler's Number"
+  "item.lawsandtheorems.the_number_e": "Euler's Number",
+  "item_group.lawsandtheorems.creativemodtab": "Laws and Theorems",
+  "sounds.lawsandtheorems.eulers_number_burning.subtitle": "Eulers Number Burning",
+  "sounds.lawsandtheorems.mind_blowing.subtitle": "Mind Blowing",
+  "sounds.lawsandtheorems.nature_log_splashing.subtitle": "Nature Log Splashing"
 }

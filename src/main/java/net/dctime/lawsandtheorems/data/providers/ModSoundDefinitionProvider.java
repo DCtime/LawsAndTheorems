@@ -16,7 +16,7 @@ public class ModSoundDefinitionProvider extends SoundDefinitionsProvider
     @Override
     public void registerSounds()
     {
-        this.add(ModSoundEvents.EULARS_NUMBER_BURNING, definition().subtitle("Euler's Number Burning").with
+        this.add(ModSoundEvents.EULARS_NUMBER_BURNING, definition().subtitle("sounds.lawsandtheorems.eulers_number_burning.subtitle").with
         (
             sound("lawsandtheorems:eulers_number_burning/eulars_number_burning_1")
             .weight(1000),
@@ -32,7 +32,7 @@ public class ModSoundDefinitionProvider extends SoundDefinitionsProvider
             .weight(1)
         ));
 
-        this.add(ModSoundEvents.NATURE_LOG_SPLASHING, definition().subtitle("Nature Log Splashing").with
+        this.add(ModSoundEvents.NATURE_LOG_SPLASHING, definition().subtitle("sounds.lawsandtheorems.nature_log_splashing.subtitle").with
         (
             sound("lawsandtheorems:nature_log_splashing/nature_log_splashing_1"),
             sound("lawsandtheorems:nature_log_splashing/nature_log_splashing_2"),
@@ -41,7 +41,7 @@ public class ModSoundDefinitionProvider extends SoundDefinitionsProvider
             sound("lawsandtheorems:nature_log_splashing/nature_log_splashing_5") 
         ));
 
-        this.add(ModSoundEvents.MIND_BLOWING, definition().subtitle("Mind Blowing").with
+        this.add(ModSoundEvents.MIND_BLOWING, definition().subtitle("sounds.lawsandtheorems.mind_blowing.subtitle").with
         (
             sound("lawsandtheorems:mind_blowing/mind_blowing_1"),
             sound("lawsandtheorems:mind_blowing/mind_blowing_2"),

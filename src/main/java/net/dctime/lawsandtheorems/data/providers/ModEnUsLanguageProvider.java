@@ -17,6 +17,11 @@ public class ModEnUsLanguageProvider extends LanguageProvider
     {
         this.add(ModItems.THE_NUMBER_E.get(), "Euler's Number");
         this.add(ModItems.NATURE_LOG.get(), "Nature Log");
+
+        this.add("sounds.lawsandtheorems.eulers_number_burning.subtitle", "Eulers Number Burning");
+        this.add("sounds.lawsandtheorems.nature_log_splashing.subtitle", "Nature Log Splashing");
+        this.add("sounds.lawsandtheorems.mind_blowing.subtitle", "Mind Blowing");
+        this.add("item_group.lawsandtheorems.creativemodtab", "Laws and Theorems");
     }
     
 }

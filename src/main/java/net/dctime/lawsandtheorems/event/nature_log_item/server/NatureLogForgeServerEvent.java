@@ -75,12 +75,15 @@ public class NatureLogForgeServerEvent
                                 natural_log_after_reaction.shrink(1);
                                 natural_log_in_reaction.setItem(natural_log_after_reaction);
 
-                                if (((ItemEntity) entity).getThrowingEntity() instanceof ServerPlayer)
+                                if (((ItemEntity) entity).getOwner() instanceof ServerPlayer)
                                 {
-                                    ServerPlayer player;
-                                    player = ((ServerPlayer)((ItemEntity) entity).getThrowingEntity());
-                                    ModNetworkHandler.CHANNEL_INSTANCE.send(PacketDistributor.PLAYER.with(() -> player),
-                                        new EulersFlameMeetsNatureLogParticlePacket(player.getX(), player.getY(), player.getZ()));
+                                    ServerPlayer player = ((ServerPlayer)((ItemEntity) entity).getOwner());
+
+                                    if (player != null)
+                                    {
+                                        ModNetworkHandler.CHANNEL_INSTANCE.send(PacketDistributor.PLAYER.with(() -> player),
+                                            new EulersFlameMeetsNatureLogParticlePacket(player.getX(), player.getY(), player.getZ()));
+                                    }
 
                                     ModTriggers.EULERS_NUMBER_MEET_NATURE_LOG.trigger(player);
                                 }

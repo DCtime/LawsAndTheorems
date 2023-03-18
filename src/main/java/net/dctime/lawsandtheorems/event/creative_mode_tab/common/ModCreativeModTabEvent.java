@@ -19,7 +19,7 @@ public class ModCreativeModTabEvent
         event.registerCreativeModeTab(new ResourceLocation(LawsAndTheorems.MODID, "creativemodtab"), (builder) -> 
             builder.title(Component.translatable("item_group." + LawsAndTheorems.MODID + ".creativemodtab"))
             .icon(() -> new ItemStack(ModItems.THE_NUMBER_E.get()))
-            .displayItems((pEnableFeatures, pOutput, pDisplayOperatorCreativeTab) -> 
+            .displayItems((displayPram, pOutput) -> 
             {
                 pOutput.accept(ModItems.NATURE_LOG.get());
                 pOutput.accept(ModItems.THE_NUMBER_E.get());

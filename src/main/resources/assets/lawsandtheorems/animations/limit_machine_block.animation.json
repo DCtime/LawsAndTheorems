@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.start": {
+			"animation_length": 2.625,
+			"bones": {
+				"needle": {
+					"position": {
+						"0.0": {
+							"vector": [0, 2, 0]
+						},
+						"1.0417": {
+							"vector": [0, -0.4, 0],
+							"easing": "easeOutQuint"
+						}
+					}
+				},
+				"pointer": {
+					"rotation": {
+						"1.2917": {
+							"vector": [0, 0, 0]
+						},
+						"2.625": {
+							"vector": [0, 0, 220],
+							"easing": "easeInOutQuint"
+						}
+					}
+				}
+			}
+		}
+	}
+}

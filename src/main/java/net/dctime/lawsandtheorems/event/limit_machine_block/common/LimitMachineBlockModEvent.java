@@ -12,6 +12,7 @@ public class LimitMachineBlockModEvent
     @SubscribeEvent
     public static void registerLimitMachineBlockRendererEvent(EntityRenderersEvent.RegisterRenderers event)
     {
+        // connect block entity and block model
         event.registerBlockEntityRenderer(ModBlockEntityTypes.LIMIT_MACHINE_BLOCK_ENTITY.get(), ctx -> new LimitMachineBlockRenderer());
     }
 }

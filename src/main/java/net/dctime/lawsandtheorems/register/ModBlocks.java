@@ -16,7 +16,7 @@ public class ModBlocks
         DeferredRegister.create(ForgeRegistries.BLOCKS, LawsAndTheorems.MODID);
 
     public static final RegistryObject<Block> LIMIT_MACHINE_BLOCK = 
-        BLOCK_DEFERRED_REGISTER.register("limit_machine_block", () -> new LimitMachineBlock(Properties.of(Material.METAL)));
+        BLOCK_DEFERRED_REGISTER.register("limit_machine_block", () -> new LimitMachineBlock(Properties.of(Material.METAL).noOcclusion()));
 
     public static void register(IEventBus eventBus)
     {

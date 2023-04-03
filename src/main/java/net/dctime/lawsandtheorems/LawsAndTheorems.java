@@ -3,6 +3,7 @@ package net.dctime.lawsandtheorems;
 import com.mojang.logging.LogUtils;
 
 import net.dctime.lawsandtheorems.networking.ModNetworkHandler;
+import net.dctime.lawsandtheorems.register.ModBlocks;
 import net.dctime.lawsandtheorems.register.ModItems;
 import net.dctime.lawsandtheorems.register.ModParticleTypes;
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
@@ -36,6 +37,7 @@ public class LawsAndTheorems
         ModItems.register(modEventBus);
         ModParticleTypes.register(modEventBus);
         ModSoundEvents.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 

@@ -4,9 +4,9 @@ package net.dctime.lawsandtheorems.data;
 import java.util.List;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
-import net.dctime.lawsandtheorems.data.providers.ModEnUsLanguageProvider;
-import net.dctime.lawsandtheorems.data.providers.ModItemModelProvider;
-import net.dctime.lawsandtheorems.data.providers.ModSoundDefinitionProvider;
+import net.dctime.lawsandtheorems.data.providers.client.ModEnUsLanguageProvider;
+import net.dctime.lawsandtheorems.data.providers.client.ModItemModelProvider;
+import net.dctime.lawsandtheorems.data.providers.client.ModSoundDefinitionProvider;
 import net.dctime.lawsandtheorems.data.providers.server.ModAdvancementProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

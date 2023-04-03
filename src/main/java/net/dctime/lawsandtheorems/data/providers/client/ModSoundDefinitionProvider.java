@@ -1,4 +1,4 @@
-package net.dctime.lawsandtheorems.data.providers;
+package net.dctime.lawsandtheorems.data.providers.client;
 
 import net.dctime.lawsandtheorems.register.ModSoundEvents;
 import net.minecraft.data.PackOutput;

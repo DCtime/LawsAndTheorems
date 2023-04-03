@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lawsandtheorems:block/limit_machine_block"
+    }
+  }
+}

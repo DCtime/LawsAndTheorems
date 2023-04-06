@@ -1,6 +1,7 @@
 package net.dctime.lawsandtheorems.register;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +20,9 @@ public class ModItems
 
     public static final RegistryObject<Item> NATURE_LOG = 
         ITEM_DEFERRED_REGISTER.register("nature_log", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> LIMIT_MACHINE_BLOCK_ITEM =
+        ITEM_DEFERRED_REGISTER.register("limit_machine_block", () -> new BlockItem(ModBlocks.LIMIT_MACHINE_BLOCK.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

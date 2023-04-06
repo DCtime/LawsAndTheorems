@@ -28,6 +28,6 @@ public class ModBlockStateProvider extends BlockStateProvider
             }
             
         };
-        this.simpleBlock(ModBlocks.LIMIT_MACHINE_BLOCK.get(), model);
+        this.simpleBlockWithItem(ModBlocks.LIMIT_MACHINE_BLOCK.get(), model);
     }
 }

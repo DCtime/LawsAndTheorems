@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "direction=east": {
+      "model": "lawsandtheorems:block/limit_machine_block",
+      "y": 270
+    },
+    "direction=north": {
       "model": "lawsandtheorems:block/limit_machine_block"
+    },
+    "direction=south": {
+      "model": "lawsandtheorems:block/limit_machine_block",
+      "y": 180
+    },
+    "direction=west": {
+      "model": "lawsandtheorems:block/limit_machine_block",
+      "y": 90
     }
   }
 }

@@ -1,6 +1,7 @@
 package net.dctime.lawsandtheorems.register;
 
 import net.dctime.lawsandtheorems.LawsAndTheorems;
+import net.dctime.lawsandtheorems.register.block.LimitMachineBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -14,7 +15,7 @@ public class ModBlocks
     public static final DeferredRegister<Block> DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, LawsAndTheorems.MODID);
 
     public static final RegistryObject<Block> LIMIT_MACHINE_BLOCK = DEFERRED_REGISTER.register("limit_machine_block",
-        () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
+        () -> new LimitMachineBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
  
     public static void register(IEventBus eventBus)
     {

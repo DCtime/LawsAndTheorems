@@ -1,13 +1,13 @@
 # Laws and Theorems - Minecraft Forge Mod
 
-## A Minecraft mod which is filled with math and science concepts to make players feel "Oh my god I've learned so much by playing this mod".
+## A Minecraft mod which is filled with math and science concepts to make players overwhelmed by the complexity of the world discovered nowadays.
 
-This project is made when I'm freshman in college. Most of the time we are learning theorems of the perfect world. While this is boring but its a must go path to master a subject. This is what this mod is build for.
+This project is made when I'm freshman in college. Most of the time we are learning theorems of the perfect world. While this is tought and hard (not as fun as playing) but its a must go path to master a subject. This is what this mod is build for.
 
 * Create a Minecraft mod which needs Forge Mod Loader to run it.
-* Dump every STEM concepts into the mod because I'm bored.
-* Doesn't care how fun it is.
-* Performance Optimize? If there is major performance issue, send an issue to me or make a pull request, or I'll just focus on readabiity.
+* Merge STEM concepts with some weird ideas.
+* Now I care how fun it is.
+* If there is major performance issue, send an issue to me or make a pull request.
 
 ## How do I add it to minecraft?
 
